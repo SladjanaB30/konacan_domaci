@@ -118,8 +118,6 @@ ssize_t alu_write(struct file *pfile, const char *buffer, size_t length, loff_t 
 
 	buff[length]='\0';
 
-	//buff[length-1]='\0';
-
 
 	if(minor>=0 && minor<4)                                          
   	{

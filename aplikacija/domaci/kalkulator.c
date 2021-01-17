@@ -4,7 +4,7 @@
 
 FILE *fp;
 
-int print_result()
+int ispisi_rezultat()
 {
 	fp=fopen("/dev/alu","r");
 
@@ -78,14 +78,14 @@ int main()
 		
 		}
 
-	        int op_count;
-		if(op[0]!=0) op_count=1;
-		if(op[1]!=0) op_count=2;
-		if(op[2]!=0) op_count=3;
+	        int broj_operacija;
+		if(op[0]!=0) broj_operacija=1;
+		if(op[1]!=0) broj_operacija=2;
+		if(op[2]!=0) broj_operacija=3;
 
-		if(op_count==1)
+		if(broj_operacija==1)
 			operacija('A','B',op[0]);
-		else if(op_count==2)
+		else if(broj_operacija==2)
 		{
 			if( (op[1]=='*' || op[1]=='/') && (op[0]=='+' || op[0]=='-') )
 			{
@@ -100,7 +100,7 @@ int main()
 			}
 		
 		}
-	      	else if(op_count==3)
+	      	else if(broj_operacija==3)
 		{
 			int brojac=0;
 			for(i=0;i<3;i++)
@@ -162,7 +162,7 @@ int main()
 
 			}	
 		}
-		print_result();
+		ispisi_rezultat();
 
 	}
 }
